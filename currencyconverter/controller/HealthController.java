@@ -1,5 +1,6 @@
 package com.example.currencyconverter.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 /*marks this class as a Spring-managed component by telling Spring that this class handles
@@ -17,6 +18,10 @@ What happens WITHOUT @RestController
 @RestController
 @RequestMapping("/api")
 public class HealthController {
+
+    Public Spring health(){
+        return "API is currently Running";
+    }
 
 
 }

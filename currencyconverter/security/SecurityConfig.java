@@ -1,4 +1,4 @@
-package com.example.currencyconverter.security;
+package com.example.currencyconverter;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -19,9 +19,8 @@ What happens WITHOUT @RestController
 @RequestMapping("/api")
 public class HealthController {
 
-    Public Spring health(){
-        return "API is currently Running";
+    @GetMapping("/health")
+    public String health() {
+        return "API is currently running";
     }
-
-
 }

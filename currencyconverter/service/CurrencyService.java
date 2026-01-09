@@ -11,4 +11,22 @@ public class CurrencyService {
     public CurrencyService() {
         this.webClient = WebClient.create("https://api.frankfurter.app");
     }
+
+    public double getExchangeRate(String from, String to) {
+
+    return webClient
+            .get()
+            .uri(uriBuilder ->
+                    uriBuilder
+                            .path("/latest")
+                            .queryParam("from", from)
+                            .queryParam("to", to)
+                            .build()
+            )
+            .retrieve()
+            .bodyToMono(ExchangeRateResponse.class)
+            .block()
+            .getRate(to);
+}
+
 }
